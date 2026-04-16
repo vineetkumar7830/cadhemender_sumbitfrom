@@ -27,6 +27,9 @@ import { EnquiryModule } from './enquiry/enquiry.module';
             user: configService.get('EMAIL_USER'),
             pass: configService.get('EMAIL_PASS'),
           },
+          tls: {
+            rejectUnauthorized: false,
+          },
         },
         defaults: {
           from: `"${configService.get('MAIL_FROM')}"`,
